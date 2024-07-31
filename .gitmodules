@@ -1,0 +1,6 @@
+[submodule "go/mindwm/mindwm-sdk-golang"]
+	path = go/mindwm/mindwm-sdk-golang
+	url = git@github.com:mindwm/mindwm-sdk-golang
+[submodule "python/mindwm/mindwm-sdk-python"]
+	path = python/mindwm/mindwm-sdk-python
+	url = git@github.com:mindwm/mindwm-sdk-python
