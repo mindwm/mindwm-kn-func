@@ -1,16 +1,25 @@
+import os
+import sys
+import re
+sys.path.append(os.path.abspath('mindwm-sdk-python/neomodel'))
+sys.path.append(os.path.abspath('mindwm-sdk-python/MindWM'))
+
 from parliament import Context, event
+
+import neomodel_data
+import MindWM
+import pprint
+
+from cloudevents.http import from_http
+from cloudevents import abstract, conversion
+
 
 
 @event
 def main(context: Context):
-    """
-    Function template
-    The context parameter contains the Flask request object and any
-    CloudEvent received with the request.
-    """
 
-    # Add your business logic here
+    event = from_http(context.request.headers, context.request.data)
+    pprint.pprint(conversion.to_json(event), stream=sys.stderr)
 
-    # The return value here will be applied as the data attribute
-    # of a CloudEvent returned to the function invoker
+
     return context.cloud_event.data
