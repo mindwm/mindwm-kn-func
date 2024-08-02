@@ -1,1 +1,6 @@
+python-dateutil
+neomodel
+opentelemetry-sdk
+opentelemetry-exporter-otlp
 parliament-functions==0.1.0
+pydantic
